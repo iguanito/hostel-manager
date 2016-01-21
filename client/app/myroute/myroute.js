@@ -6,6 +6,7 @@ angular.module('hostelManagerApp')
       .state('myroute', {
         url: '/myroute',
         templateUrl: 'app/myroute/myroute.html',
-        controller: 'MyrouteCtrl'
+        controller: 'MyrouteCtrl',
+        controllerAs: 'myroute'
       });
   });

@@ -1,6 +1,26 @@
 'use strict';
 
-angular.module('hostelManagerApp')
-  .controller('MyrouteCtrl', function ($scope) {
-    $scope.message = 'Hello';
-  });
+
+(function () {
+
+    class MyRouteCtrl {
+        constructor($http, $scope) {
+            this.$http = $http;
+            this.host = {};
+        }
+
+        addHost() {
+            if (this.host) {
+                this.$http.post('/api/host', this.host);
+                this.host = {};
+            }
+        }
+
+        reset() {
+            this.host = {};
+        }
+    }
+
+    angular.module('hostelManagerApp')
+        .controller('MyrouteCtrl', MyRouteCtrl);
+})();
