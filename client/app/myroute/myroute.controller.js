@@ -4,7 +4,7 @@
 (function () {
 
     class MyRouteCtrl {
-        constructor($http, $scope) {
+        constructor($http) {
             this.$http = $http;
             this.host = {};
         }
@@ -21,6 +21,5 @@
         }
     }
 
-    angular.module('hostelManagerApp')
-        .controller('MyrouteCtrl', MyRouteCtrl);
+    angular.module('hostelManagerApp').controller('MyrouteCtrl', MyRouteCtrl);
 })();
