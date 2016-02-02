@@ -812,7 +812,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'newer:tslint',
+    'newer:jshint',
     'test',
     'build'
   ]);
