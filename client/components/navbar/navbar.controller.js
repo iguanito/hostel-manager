@@ -11,8 +11,8 @@
                 'state': 'myroute'
         },
             {
-                'title': 'Calculator',
-                'state': 'calculator'
+                'title': 'Money',
+                'state': 'money'
     }];
 
         isCollapsed = true;

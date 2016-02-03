@@ -2,7 +2,7 @@
 
 (function () {
 
-    class CalculatorCtrl {
+    class CurrencyCtrl {
         constructor() {
             this.reset();
         }
@@ -50,6 +50,8 @@
             this.cardPaymentCommissionPercent = '5';
         }
     }
+    
+    
 
-    angular.module('hostelManagerApp').controller('CalculatorCtrl', CalculatorCtrl);
+    angular.module('hostelManagerApp').controller('CurrencyCtrl', CurrencyCtrl);
 })();
