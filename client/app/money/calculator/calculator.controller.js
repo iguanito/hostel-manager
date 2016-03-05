@@ -17,10 +17,10 @@
             var expressionReg = /[-()\d/*+.]/;
             if (expressionReg.test(this.expression)) {
                 try {
-                    this.result = eval(this.expression); /*jshint ignore:line */
+                    this.result = new Function('return ' + this.expression)();
                     this.isExpressionValid = true;
                     return;
-                } catch (ignored){            
+                } catch (ignored){       
                 }
             } 
             
