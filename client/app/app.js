@@ -12,9 +12,11 @@ angular.module('hostelManagerApp', [
   'ui.bootstrap',
   'validation.match'
 ])
-  .config(function($urlRouterProvider, $locationProvider) {
-    $urlRouterProvider
-      .otherwise('/');
+    .config(function ($urlRouterProvider, $locationProvider) {
+        $urlRouterProvider
+        //for backward compatibility
+            .when('/calculator', '/money')
+            .otherwise('/');
 
-    $locationProvider.html5Mode(true);
-  });
+        $locationProvider.html5Mode(true);
+    });

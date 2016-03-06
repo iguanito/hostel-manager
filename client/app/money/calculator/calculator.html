@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row calculator-font col-md-offset-1">
+        <input class="col-md-4" ng-class="{'calculator-screen-ok': calculator.isExpressionValid, 'calculator-screen-error': !calculator.isExpressionValid}" ng-keyup="calculator.eval()" ng-model="calculator.expression"></input>
+        <span class="col-md-4">= {{calculator.result}}</span>
+    </div>
+    
+    <div class="row well col-md-4 col-md-offset-1">
+        <div class="row">
+            <button type="submit" ng-click="calculator.putAndEval('7')" class="btn btn-default btn-calculator" data-key="55">7</button>
+            <button type="submit" ng-click="calculator.putAndEval('8')" class="btn btn-default btn-calculator" data-key="56">8</button>
+            <button type="submit" ng-click="calculator.putAndEval('9')" class="btn btn-default btn-calculator" data-key="57">9</button>
+            <button type="submit" ng-click="calculator.putAndEval('(')" class="btn btn-default btn-calculator" data-key="40">(</button>
+            <button type="submit" ng-click="calculator.putAndEval(')')" class="btn btn-default btn-calculator" data-key="41">)</button>
+        </div>
+        <div class="row">
+            <button type="submit" ng-click="calculator.putAndEval('4')" class="btn btn-default btn-calculator" data-key="52">4</button>
+            <button type="submit" ng-click="calculator.putAndEval('5')" class="btn btn-default btn-calculator" data-key="53">5</button>
+            <button type="submit" ng-click="calculator.putAndEval('6')" class="btn btn-default btn-calculator" data-key="54">6</button>
+            <button type="submit" ng-click="calculator.putAndEval('-')" class="btn btn-default btn-calculator" data-key="45">-</button>
+            <button type="submit" ng-click="calculator.putAndEval('+')" class="btn btn-default btn-calculator" data-key="43">+</button>
+        </div>
+        <div class="row">
+            <button type="submit" ng-click="calculator.putAndEval('1')" class="btn btn-default btn-calculator" data-key="49">1</button>
+            <button type="submit" ng-click="calculator.putAndEval('2')" class="btn btn-default btn-calculator" data-key="50">2</button>
+            <button type="submit" ng-click="calculator.putAndEval('3')" class="btn btn-default btn-calculator" data-key="51">3</button>
+            <button type="submit" ng-click="calculator.putAndEval('/')" class="btn btn-default btn-calculator" data-key="47">/</button>
+            <button type="submit" ng-click="calculator.putAndEval('*')" class="btn btn-default btn-calculator" data-key="42">*</button>
+        </div>
+        <div class="row">
+            <button type="submit" ng-click="calculator.putAndEval('.')" class="btn btn-default btn-calculator" data-key="46">.</button>
+            <button type="submit" ng-click="calculator.putAndEval('0')" class="btn btn-default btn-calculator" data-key="58">0</button>
+            <button type="submit" ng-click="calculator.removeAndEval()" class="btn btn-default btn-calculator " data-key=""><span class="glyphicon glyphicon-arrow-left"></span></button>
+            <button ng-click="calculator.reset()" type="submit" class="btn btn-danger btn-reset" data-key="8">C</button>
+        </div>
+    </div>
+</div>
