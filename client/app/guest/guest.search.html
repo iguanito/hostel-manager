@@ -1,0 +1,27 @@
+<navbar></navbar>
+
+
+<script type="text/ng-template" id="customTemplate.html">
+    <a>
+        <span ng-show="match.model.firstName" ng-bind-html="match.model.firstName | uibTypeaheadHighlight:query"></span>
+        <span ng-show="match.model.lastName" ng-bind-html="match.model.lastName | uibTypeaheadHighlight:query"></span>
+    </a>
+</script>
+
+<div class="container">
+    <h3>Search by name</h3>
+    <input type="text" ng-model="clientName" placeholder="Type client name"
+           uib-typeahead="guest.firstName for guest in guestCtrl.searchGuestFromName($viewValue)"
+           typeahead-template-url="customTemplate.html"
+           typeahead-on-select="guestCtrl.displayGuest($item, $model, $label)"
+           typeahead-loading="loadingCustomers"
+           typeahead-no-results="noResults"
+           class="form-control">
+    <i ng-show="loadingCustomers" class="glyphicon glyphicon-refresh"></i>
+    <div ng-show="noResults">
+        <i class="glyphicon glyphicon-remove"></i> No customer found
+    </div>
+
+    <h3>Search by date</h3>
+
+</div>

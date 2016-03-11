@@ -1,0 +1,31 @@
+<navbar></navbar>
+
+<div class="container">
+  <!-- First name -->
+  <h2>{{guest.firstName}} {{guest.lastName}}
+  <button class="btn btn-primary" ng-click="guestCtrl.editGuest(guest._id)">Edit guest</button></h2>
+  <hr/>
+
+  <h4><span class="glyphicon glyphicon-globe">&nbsp;</span>{{guest.country}}</h4>
+
+  <br/>
+  <p class="text-muted">Arrival</p>
+  <h4><span class="glyphicon glyphicon-calendar">&nbsp;</span>{{guest.date.startDate | date:'d MMMM yyyy'}} - {{guest.date.endDate | date:'d MMMM yyyy'}}</h4>
+
+  <h4><span class="glyphicon glyphicon-time">&nbsp;</span>{{guest.arrivalHour | date:'HH:mm'}}</h4>
+
+  <br/>
+  <p class="text-muted">Details</p>
+  <h4><span class="glyphicon glyphicon-bed">&nbsp;</span>{{guest.roomType}}</h4>
+  <h4><span class="glyphicon glyphicon-user">&nbsp;</span>{{guest.personNb}}</h4>
+  <h4><span class="glyphicon glyphicon-save">&nbsp;</span>{{guest.bookingType}}</h4>
+  <br>
+
+  <p class="text-muted">Price</p>
+  <h4 class="text-danger"><span class="glyphicon glyphicon-piggy-bank">&nbsp;</span>{{guest.price}} {{guest.currency}}</h4>
+
+  <br/>
+  <p class="text-muted">Notes</p>
+  <h4><span class="glyphicon glyphicon-pencil">&nbsp;</span>{{guest.note}}</h4>
+
+</div>

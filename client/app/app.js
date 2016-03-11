@@ -10,7 +10,9 @@ angular.module('hostelManagerApp', [
   'btford.socket-io',
   'ui.router',
   'ui.bootstrap',
-  'validation.match'
+  'validation.match',
+  'puigcerber.countryPicker',
+  'daterangepicker'
 ])
     .config(function ($urlRouterProvider, $locationProvider) {
         $urlRouterProvider

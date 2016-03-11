@@ -7,8 +7,15 @@
                 'state': 'main'
         },
             {
-                'title': 'Hosts',
-                'state': 'myroute'
+                'title': 'Guests',
+                'subtitles':  [{
+                    'title': 'Create guest',
+                    'state': 'guest.create'
+                },
+                {
+                    'title': 'Search guest',
+                    'state': 'guest.search'
+                }]
         },
             {
                 'title': 'Money',
