@@ -17,7 +17,7 @@
             var expressionReg = /[-()\d/*+.]/;
             if (expressionReg.test(this.expression)) {
                 try {
-                    this.result = new Function('return ' + this.expression)();
+                    this.result = new Function('return ' + this.expression)(); /*jshint ignore:line */
                     this.isExpressionValid = true;
                     return;
                 } catch (ignored){       
