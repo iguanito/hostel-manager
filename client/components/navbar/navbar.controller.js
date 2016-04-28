@@ -13,6 +13,10 @@
             {
                 'title': 'Money',
                 'state': 'money'
+        },
+            {
+                'title': 'Websites',
+                'state': 'format'
     }];
 
         isCollapsed = true;
