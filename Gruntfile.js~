@@ -411,7 +411,7 @@ module.exports = function (grunt) {
       },
       heroku: {
         options: {
-          remote: 'git@heroku.com:kinkaju.git',
+          remote: 'git@heroku.com:kinkaju',
           branch: 'master'
         }
       },
