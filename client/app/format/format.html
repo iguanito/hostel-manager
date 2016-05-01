@@ -27,22 +27,22 @@
         <div class="row top10">
             <table class="table table-bordered">
                 <tr>
-                    <th>Name</th>
-                    <th>Website</th>
-                    <th>Email</th>
-                    <th>Passport Number</th>
-                    <th>Country</th>
-                    <th>Price</th>
-                    <th>Notes</th>
+                  <th>Name</th>
+                  <th>Passport Number</th>
+                  <th>Country</th>
+                  <th>Email</th>
+                  <th>Website</th>
+                  <th>Price</th>
+                  <th>Notes</th>
                 </tr>
                 <tr>
-                    <td ng-style="{'background-color':guest.nights > 1 ?  'rgb(74, 134, 232)': 'rgb(255, 255, 0)'}">{{guest.name}}</td>
-                    <td>{{website}}</td>
-                    <td>{{guest.email}}</td>
-                    <td></td>
-                    <td>{{guest.nationality}}</td>
-                    <td>{{displayPrice(guest.currency,guest.price)}}</td>
-                    <td>{{displayNightNb(guest.nights)}}/{{guest.arrivalTime}}/{{displayPeopleNb(guest.peopleNumber)}}</td>
+                  <td ng-style="{'background-color':guest.nights > 1 ?  'rgb(74, 134, 232)': 'rgb(255, 255, 0)'}">{{guest.name}}</td>
+                  <td></td>
+                  <td>{{guest.nationality}}</td>
+                  <td>{{guest.email}}</td>
+                  <td>{{displayWebsite(website)}}</td>
+                  <td>{{displayPrice(guest.currency,guest.price)}}</td>
+                  <td>{{displayNightNb(guest.nights)}}/{{guest.arrivalTime}}/{{displayPeopleNb(guest.peopleNumber)}}</td>
                 </tr>
                 <tr ng-repeat="people in peopleRange(guest.peopleNumber)">
                     <td ng-style="{'background-color':guest.nights > 1 ?  'rgb(74, 134, 232)': 'rgb(255, 255, 0)'}">&nbsp;</td>
