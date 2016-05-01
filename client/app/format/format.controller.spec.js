@@ -17,61 +17,60 @@ describe('Controller: FormatCtrl', function () {
   }));
 
   it('should detect find name in content', function () {
-    scope.extractAndFormatGuestInfo(hwContent);  
+    scope.extractAndFormatGuestInfo(hwContent);
     expect(scope.guest.name).toEqual('David Camora');
   });
-    
+
   it('should detect find email in content', function () {
-    scope.extractAndFormatGuestInfo(hwContent);  
+    scope.extractAndFormatGuestInfo(hwContent);
     expect(scope.guest.email).toEqual('address@gmail.com');
   });
-    
+
   it('should detect find nationality in content', function () {
-    scope.extractAndFormatGuestInfo(hwContent);  
+    scope.extractAndFormatGuestInfo(hwContent);
     expect(scope.guest.nationality).toEqual('Mexico');
   });
-    
+
   it('should detect arrival time in content', function () {
-    scope.extractAndFormatGuestInfo(hwContent);  
+    scope.extractAndFormatGuestInfo(hwContent);
     expect(scope.guest.arrivalTime).toEqual('19:00');
   });
-    
+
   it('should detect number of people in content', function () {
-    scope.extractAndFormatGuestInfo(hwContent);  
+    scope.extractAndFormatGuestInfo(hwContent);
     expect(scope.guest.peopleNumber).toEqual('1');
   });
- 
+
   it('should detect price in content', function () {
-    scope.extractAndFormatGuestInfo(hwContent);  
+    scope.extractAndFormatGuestInfo(hwContent);
     expect(scope.guest.price).toEqual('13260');
   });
-    
+
   it('should detect currency in content', function () {
-    scope.extractAndFormatGuestInfo(hwContent);  
+    scope.extractAndFormatGuestInfo(hwContent);
     expect(scope.guest.currency).toEqual('CRC');
   });
-    
-  it('should detect number of nights in content', function () {
-    scope.extractAndFormatGuestInfo(hwContent);  
-    expect(scope.guest.nights).toEqual(2);
-  });  
-    
-        
-  it('should retrun a range of number', function () {
-    var range = scope.peopleRange(3);  
-    expect(range).toEqual([0,1]);
-  });    
-    
-    
-    
-  
-    
-  
-    
 
-    
-    
-    
+  it('should detect number of nights in content', function () {
+    scope.extractAndFormatGuestInfo(hwContent);
+    expect(scope.guest.nights).toEqual(2);
+  });
+
+  it('should return a range of number', function () {
+    var range = scope.peopleRange(3);
+    expect(range).toEqual([0,1]);
+  });
+
+
+
+
+
+
+
+
+
+
+
 });
 
 

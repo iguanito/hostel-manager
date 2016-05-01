@@ -58,13 +58,13 @@ angular.module('hostelManagerApp')
             price: function(unformatedPrice){
                 var test = /[A-Z]{3} ([0-9,]+).*/.exec(unformatedPrice);
                 if(test){
-                    return test[1].replace(',', '');    
+                    return test[1].replace(',', '');
                 }
             },
             currency: function (unformatedCurrency) {
                 var test = /([A-Z]{3}) .*/.exec(unformatedCurrency);
                 if(test){
-                    return test[1];    
+                    return test[1];
                 }
             },
             peopleNumber: function(unformatedPeopleNb){
@@ -97,7 +97,7 @@ angular.module('hostelManagerApp')
                 return unformatedNight + ' noches';
             }
         };
-        
+
         $scope.displayPrice = function(currency, price) {
             if(currency === 'CRC'){
                 return '₡' + price;
@@ -107,9 +107,18 @@ angular.module('hostelManagerApp')
                 return currency + price;
             }
         };
+
+      $scope.displayWebsite = function(website) {
+        var websiteNameFormatings = {
+          hostelworld: 'HW',
+          booking: 'BK'
+        };
         
+        return websiteNameFormatings[website];
+      };
+
         $scope.peopleRange = function(peopleNb) {
             return _.range(peopleNb - 1);
         };
-        
+
     });
