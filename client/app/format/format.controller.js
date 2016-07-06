@@ -98,11 +98,11 @@ angular.module('hostelManagerApp')
             }
         };
 
-        $scope.displayPrice = function(currency, price) {
+        $scope.displayPriceInDollars = function(currency, price) {
             if(currency === 'CRC'){
-                return '₡' + price;
+                return '$ ' + price/540;
             } else if (currency === 'USD'){
-                return '$' + price;
+                return '$ ' + price;
             } else {
                 return currency + price;
             }
@@ -111,7 +111,7 @@ angular.module('hostelManagerApp')
       $scope.displayWebsite = function(website) {
         var websiteNameFormatings = {
           hostelworld: 'HW',
-          booking: 'BK'
+          booking: 'B'
         };
         
         return websiteNameFormatings[website];

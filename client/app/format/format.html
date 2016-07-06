@@ -32,7 +32,8 @@
                   <th>Country</th>
                   <th>Email</th>
                   <th>Website</th>
-                  <th>Price</th>
+                  <th>Price (&#36;)</th>
+                  <th>Price (&#36;)</th>  
                   <th>Notes</th>
                 </tr>
                 <tr>
@@ -42,6 +43,7 @@
                   <td>{{guest.email}}</td>
                   <td>{{displayWebsite(website)}}</td>
                   <td>{{displayPrice(guest.currency,guest.price)}}</td>
+                  <td></td>
                   <td>{{displayNightNb(guest.nights)}}/{{guest.arrivalTime}}/{{displayPeopleNb(guest.peopleNumber)}}</td>
                 </tr>
                 <tr ng-repeat="people in peopleRange(guest.peopleNumber)">
