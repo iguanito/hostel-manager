@@ -17,7 +17,7 @@ describe('Controller: CurrencyCtrl', function () {
 
     it('should initiate controller', function () {
         expect(CurrencyCtrl).toBeDefined();
-        expect(CurrencyCtrl.rate).toEqual('540');
+        expect(CurrencyCtrl.rate).toEqual('550');
         expect(CurrencyCtrl.priceColones).toEqual('');
         expect(CurrencyCtrl.priceDollars).toEqual('');
         expect(CurrencyCtrl.customerPaymentColones).toEqual('');
@@ -37,7 +37,7 @@ describe('Controller: CurrencyCtrl', function () {
         
         CurrencyCtrl.reset();
         
-        expect(CurrencyCtrl.rate).toEqual('540');
+        expect(CurrencyCtrl.rate).toEqual('550');
         expect(CurrencyCtrl.priceColones).toEqual('');
         expect(CurrencyCtrl.priceDollars).toEqual('');
         expect(CurrencyCtrl.customerPaymentColones).toEqual('');
@@ -56,8 +56,8 @@ describe('Controller: CurrencyCtrl', function () {
 
         CurrencyCtrl.computeReturnOrcardPayment();
 
-        expect(CurrencyCtrl.displayedPriceColones).toBe(5524);
-        expect(CurrencyCtrl.returnColones).toBe(476);
+        expect(CurrencyCtrl.displayedPriceColones).toBe(5627);
+        expect(CurrencyCtrl.returnColones).toBe(374);
     });
 
     it('should compute displayed price and return price in dollars with 2 decimals maximum', function () {
@@ -66,8 +66,8 @@ describe('Controller: CurrencyCtrl', function () {
 
         CurrencyCtrl.computeReturnOrcardPayment();
 
-        expect(CurrencyCtrl.displayedPriceDollars).toBe(4.14);
-        expect(CurrencyCtrl.returnDollars).toBe(0.86);
+        expect(CurrencyCtrl.displayedPriceDollars).toBe(4.06);
+        expect(CurrencyCtrl.returnDollars).toBe(0.94);
     });
 
 
@@ -114,7 +114,7 @@ describe('Controller: CurrencyCtrl', function () {
 
         CurrencyCtrl.computeReturnOrcardPayment();
 
-        expect(CurrencyCtrl.returnColones).toBeCloseTo(300);
+        expect(CurrencyCtrl.returnColones).toBeCloseTo(250);
     });
 
     it('should not compute return if flag is set to false', function () {

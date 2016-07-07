@@ -44,7 +44,7 @@
             this.customerPaymentDollars = '';
             this.returnColones = '';
             this.returnDollars = '';
-            this.rate = '540';
+            this.rate = '550';
             this.cardPayment = false;
             this.cardPaymentDollars = '';
             this.cardPaymentCommissionPercent = '5';
