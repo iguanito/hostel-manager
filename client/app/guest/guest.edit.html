@@ -1,0 +1,119 @@
+<navbar></navbar>
+
+<div class="container">
+    <form class="form-horizontal" role="form">
+        <!-- First name -->
+        <div class="form-group">
+            <label class="control-label col-md-4" for="first-name">First Name </label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="First Name" id="first-name" ng-model="guest.firstName">
+            </div>
+        </div>
+
+        <!-- Last name -->
+        <div class="form-group">
+            <label class="control-label col-md-4" for="last-name">Last Name </label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="last-name" placeholder="Last Name" ng-model="guest.lastName">
+            </div>
+        </div>
+
+        <!-- Country -->
+        <div class="form-group">
+            <label class="control-label col-md-4" for="country">Country </label>
+            <div class="col-md-4">
+                <select class="form-control" ng-model="guest.country" id="country" pvp-country-picker="name" placeholder="Select country"></select>
+            </div>
+        </div>
+
+        <!-- Date -->
+        <div class="form-group">
+            <label class="control-label col-md-4" for="date">Date </label>
+            <div class="col-md-4">
+                <input date-range-picker class="form-control date-picker" id="date" type="text" placeholder="Click to choose arrival and departure dates" ng-model="guest.date" />
+            </div>
+        </div>
+
+        <!-- Arrival hour -->
+        <div class="form-group">
+            <label class="timepicker-label col-md-4" for="arrival">Arrival hour</label>
+            <div class="col-md-4" id="arrival">
+                <uib-timepicker ng-model="guest.arrivalHour" show-meridian="false" id="arrival"></uib-timepicker>
+            </div>
+        </div>
+
+        <!-- Room type -->
+        <div class="form-group">
+            <label class="control-label col-md-4" for="room-type">Room Type</label>
+            <div class="col-md-4">
+                <select class="form-control" ng-model="guest.roomType" id="room-type">
+                    <option value="dorm">Dorm</option>
+                    <option value="triple">Triple</option>
+                    <option value="quadruple">Quadruple</option>
+                    <option value="rooftop">Roof Top</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Numbers of people -->
+        <div class="form-group">
+            <label class="control-label col-md-4" for="persons">Persons</label>
+            <div class="col-md-4">
+                <select class="form-control" ng-model="guest.personNb" id="persons">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Price -->
+        <div class="form-group">
+            <label class="control-label col-md-4" for="price">Price </label>
+            <span class="col-md-2">
+                <input type="text" class="form-control" id="price" placeholder="Price" ng-model="guest.price">
+            </span>
+            <span class="col-md-1">
+                    <select class="form-control" ng-model="guest.currency">
+                        <option value="dollar">$</option>
+                        <option value="colon">&#8353;</option>
+                    </select>
+             </span>
+        </div>
+
+        <!-- Booking type -->
+        <div class="form-group">
+            <label class="control-label col-md-4" for="arrival">Booking Type</label>
+            <div class="col-md-4">
+                <select class="form-control" ng-model="guest.bookingType">
+                    <option value="hostelworld">Hostelworld</option>
+                    <option value="booking">Booking</option>
+                    <option value="direct">Direct</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Note -->
+        <div class="form-group">
+            <label class="control-label col-md-4" for="note">Note</label>
+            <div class="col-md-4">
+                <input class="form-control" type="text" id="note" ng-model="guest.note" placeholder="Add a note" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-4 col-md-4">
+                <button type="submit" class="btn btn-primary" ng-click="guestCtrl.updateGuest(guest)">Update guest</button>
+                <button type="reset" class="btn btn-danger" ng-click="guestCtrl.deleteGuest(guest._id)">Delete guest</button>
+            </div>
+        </div>
+    </form>
+</div>

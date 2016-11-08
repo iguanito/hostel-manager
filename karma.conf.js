@@ -22,6 +22,10 @@ module.exports = function(config) {
       'client/bower_components/angular-socket-io/socket.js',
       'client/bower_components/angular-ui-router/release/angular-ui-router.js',
       'client/bower_components/angular-validation-match/dist/angular-validation-match.min.js',
+      'client/bower_components/angular-country-picker/country-picker.js',
+      'client/bower_components/moment/moment.js',
+      'client/bower_components/bootstrap-daterangepicker/daterangepicker.js',
+      'client/bower_components/angular-daterangepicker/js/angular-daterangepicker.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'node_modules/socket.io-client/socket.io.js',
