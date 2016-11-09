@@ -58,7 +58,7 @@ describe('Guest API:', function() {
             if (err) {
               return done(err);
             }
-            if(i == guests.length) done();
+            if(i === guests.length) done();
           });
       });
   });
