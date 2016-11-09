@@ -9,5 +9,7 @@ before_script:
   - npm install -g bower grunt-cli
   - bower install
 services: mongodb
-after_success:
- - bash ./travis/after_success.sh
+deploy:
+  provider: heroku
+  api_key:
+    secure: "87d3ff8d-1fd5-46df-a11f-d64b4848a8db"
