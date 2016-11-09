@@ -9,7 +9,7 @@ before_script:
   - npm install -g bower grunt-cli
   - bower install
 services: mongodb
-deploy:
-  provider: heroku
-  api_key:
+#deploy:
+#  provider: heroku
+#  api_key:
     #secure: "87d3ff8d-1fd5-46df-a11f-d64b4848a8db"
