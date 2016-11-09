@@ -47,18 +47,16 @@ describe('Guest API:', function() {
   });
 
   after(function(done){
-    var i = 0;
     guests.forEach(
-      function (guest) {
+      function (guest, index) {
         request(app)
           .delete('/api/guests/' + guest._id)
           .expect(204)
           .end((err, res) => {
-            i++;
             if (err) {
               return done(err);
             }
-            if(i === guests.length) done();
+            if(index === guests.length - 1) done();
           });
       });
   });
