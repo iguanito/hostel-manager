@@ -101,13 +101,36 @@ export function destroy(req, res) {
     .catch(handleError(res));
 }
 
-export function search(req, res) {
-  Guest.findAsync({ $or:
-          [
-              {firstName: new RegExp(req.query.name, 'i')},
-              {lastName: new RegExp(req.query.name, 'i')}
-          ]})
-      .then(handleEntityNotFound(res))
-      .then(respondWithResult(res))
-      .catch(handleError(res));
+function buildDbQuery(queryParams) {
+  var query = {};
+
+  if(queryParams.name){
+    return {$or:
+      [
+        {firstName: new RegExp(queryParams.name, 'i')},
+        {lastName: new RegExp(queryParams.name, 'i')}
+      ]
+    };
+  }
+
+  if(queryParams.fromDate  && queryParams.toDate) {
+    return {$or:
+      [
+        {'date.startDate': {$gte: new Date(queryParams.fromDate), $lte: new Date(queryParams.toDate)}},
+        {'date.endDate': {$gte: new Date(queryParams.fromDate), $lte: new Date(queryParams.toDate)}},
+        {$and:[
+          {'date.startDate': {$lt: new Date(queryParams.fromDate)}},
+          {'date.endDate': {$gt: new Date(queryParams.toDate)}}
+        ]}
+      ]
+    };
+  }
 }
+
+export function search(req, res) {
+  Guest.findAsync(buildDbQuery(req.query))
+    .then(handleEntityNotFound(res))
+    .then(respondWithResult(res))
+    .catch(handleError(res));
+}
+
